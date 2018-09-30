@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.slive.fileextractor.MainActivity">
+    
+    <com.slive.util.CommonTitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+    </com.slive.util.CommonTitleBar>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="开始提取文件"/>
+
+    <LinearLayout
+        android:id="@+id/input_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/start">
+
+        <EditText
+            android:id="@+id/key_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textSize="12sp"
+            android:hint="请输入你要从文件中提取的关键字"/>
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_noclickable_shape"
+            android:layout_weight="1"
+            android:textColor="#b7b8bd"
+            android:text="确定"/>
+
+    </LinearLayout>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/id_flowlayout"
+        app:max_select="1"
+        android:layout_below="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+    </com.zhy.view.flowlayout.TagFlowLayout>
+
+</RelativeLayout>
