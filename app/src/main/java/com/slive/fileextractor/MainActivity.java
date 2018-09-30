@@ -135,12 +135,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
     private void extractorFile(){
-        ToastUtil.show(this, "开始提取文件...");
-
         if (keys.size() == 0) {
             ToastUtil.show(this, "请先设置要提取的关键字");
             return;
         }
+
+        ToastUtil.show(this, "开始提取文件...");
 
         String originalPath = FileUtil.getFilePath() + "original";
         String resultPath = FileUtil.getFilePath() + "result";
